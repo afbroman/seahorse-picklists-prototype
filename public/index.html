@@ -1,31 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>UX Prototype for Picklists</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link href="index.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body class="development">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!--Brand and toggle get grouped for better mobile display-->
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">ADRC</a>
+                </div>
+                <!--Collect the nav links, forms, and other content for toggling-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="">Visits</a>
+                        </li>
+                        <li class="active">
+                            <a href="">Samples</a>
+                        </li>
+                        <li>
+                            <a href="">Participants</a>
+                        </li>
+                        <li>
+                            <a href="">Projects</a>
+                        </li>
+                        <li>
+                            <a href="">Investigators</a>
+                        </li>
+                        <li>
+                            <a href="">Requests</a>
+                        </li>
+                        <li>
+                            <a href="">Picklists</a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" data-method="delete" href="">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>Samples</h1>
+            <div class="well">
+                <form id="filterrific_filter" class="new_filterrific" action="#" accept-charset="UTF-8" method="get">
+                    <input name="utf8" type="hidden" value="&#x2713;" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div data-react-class="SampleCount" data-react-props="{&quot;source&quot;:&quot;/samples.json&quot;}"></div>
+                        </div>
+                        <div class="col-md-3 col-md-offset-9">
+                            <a class="btn btn-default btn-md pull-right vertical-button" href="/visits/filter?filterrific%5Breset_filterrific%5D=true">Reset filters</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Search ADRC ID</label>
+                            <input class="filterrific-periodically-observed form-control" type="text" name="filterrific[search_query]" id="filterrific_search_query" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Sorted by</label>
+                            <select class="form-control" name="filterrific[sorted_by]" id="filterrific_sorted_by">
+                                <option value="adrc_id_asc">ADRC ID (ascending)</option>
+                                <option value="adrc_id_desc">ADRC ID (descending)</option>
+                                <option value="visit_type_asc">Visit type</option>
+                                <option value="created_at_desc">Creation date (newest first)</option>
+                                <option value="created_at_asc">Creation date (oldest first)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Sample Type</label>
+                            <select class="form-control" name="filterrific[with_sample_type]" id="filterrific_with_sample_type">
+                                <option value="">- Any -</option>
+                                <option value="serum">serum</option>
+                                <option value="plasma">plasma</option>
+                                <option value="whole_blood">whole_blood</option>
+                                <option value="csf">csf</option>
+                                <option value="dna">dna</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Sample Status</label>
+                            <select class="form-control" name="filterrific[with_sample_status]" id="filterrific_with_sample_status">
+                                <option value="">- Any -</option>
+                                <option value="available">available</option>
+                                <option value="sent">sent</option>
+                                <option value="reserved">reserved</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Multiple ADRC IDs</label>
+                            <textarea class="filterrific-periodically-observed form-control" name="filterrific[multiple_id_query]" id="filterrific_multiple_id_query">
+</textarea>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Race</label>
+                            <select class="form-control" name="filterrific[with_race]" id="filterrific_with_race">
+                                <option value="">- Any -</option>
+                                <option value="white">white</option>
+                                <option value="black_or_african_american">black_or_african_american</option>
+                                <option value="american_indian_or_alaska_native">american_indian_or_alaska_native</option>
+                                <option value="native_hawaiian_or_other_pacific_islander">native_hawaiian_or_other_pacific_islander</option>
+                                <option value="asian">asian</option>
+                                <option value="other">other</option>
+                                <option value="unknown">unknown</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>DOS after</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                <input class="filterrific-periodically-observed form-control datepicker" type="text" name="filterrific[with_dos_gte]" id="filterrific_with_dos_gte" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label>DOS before</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                <input class="filterrific-periodically-observed form-control datepicker" type="text" name="filterrific[with_dos_lte]" id="filterrific_with_dos_lte" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Cohort</label>
+                            <select class="form-control" name="filterrific[with_cohort]" id="filterrific_with_cohort">
+                                <option value="">- Any -</option>
+                                <option value="control">control</option>
+                                <option value="mci">mci</option>
+                                <option value="ad">ad</option>
+                                <option value="other_dx">other_dx</option>
+                                <option value="impact">impact</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Gender</label>
+                            <select class="form-control" name="filterrific[with_gender]" id="filterrific_with_gender">
+                                <option value="">- Any -</option>
+                                <option value="female">female</option>
+                                <option value="male">male</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Age above</label>
+                            <div class="input-group">
+                                <input class="filterrific-periodically-observed form-control" type="text" name="filterrific[with_age_gte]" id="filterrific_with_age_gte" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Age below</label>
+                            <div class="input-group">
+                                <input class="filterrific-periodically-observed form-control" type="text" name="filterrific[with_age_lte]" id="filterrific_with_age_lte" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Visit Type</label>
+                            <select class="form-control" name="filterrific[with_visit_type]" id="filterrific_with_visit_type">
+                                <option value="">- Any -</option>
+                                <option value="baseline">baseline</option>
+                                <option value="annual1">annual1</option>
+                                <option value="annual2">annual2</option>
+                                <option value="annual3">annual3</option>
+                                <option value="annual4">annual4</option>
+                                <option value="annual5">annual5</option>
+                                <option value="annual6">annual6</option>
+                                <option value="annual7">annual7</option>
+                                <option value="annual8">annual8</option>
+                                <option value="annual9">annual9</option>
+                                <option value="annual10">annual10</option>
+                                <option value="csfv1">csfv1</option>
+                                <option value="csfv2">csfv2</option>
+                                <option value="phone">phone</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Show only completed</label>
+                            <input class="filterrific-periodically-observed pull-right" type="checkbox" value="completed" checked="checked" name="filterrific[with_visit_status]" id="filterrific_with_visit_status" />
+                        </div>
+                        <div class="col-md-2">
+                            <label>Include distributed</label>
+                            <input name="filterrific[with_distributed]" type="hidden" value="undistributed" />
+                            <input class="filterrific-periodically-observed pull-right" type="checkbox" value="distributed" name="filterrific[with_distributed]" id="filterrific_with_distributed" />
+                        </div>
+                    </div>
+                </form>
+                <button class="btn btn-default" id="export_filter" type="button">Export</button>
+            </div>
+            <div id="results">
+                <div class="well well-small">
+                    <div class="row">
+                        <div class="col-md-12">Displaying visits 
+                            <b>1&nbsp;-&nbsp;10</b> of 
+                            <b>1173</b> in total
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ADRC ID</th>
+                            <th>Visit Type</th>
+                            <th>DOS</th>
+                            <th>Cohort</th>
+                            <th>Ethnicity</th>
+                            <th>Number of Samples</th>
+                            <th>Visit Status</th>
+                            <th>Sample Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
 </html>
