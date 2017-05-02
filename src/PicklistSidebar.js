@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 class PicklistSidebar extends Component {
   render() {
     return (
-      <div className="picklist-sidebar panel panel-default">
-        <div className="panel-heading">Picklist</div>
-        <div className="panel-body"></div>
+      <div class="card">
+        <div className="picklist-sidebar card-block">
+          <div className="card-title">Picklist</div>
+          <div className="card-body"></div>
+        </div>
       </div>
     );
   }
