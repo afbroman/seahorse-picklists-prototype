@@ -25,12 +25,13 @@ body {
     float: right;
 }
 
-/*#filter-form {*/
-  /*visibility: visible;*/
-  /*opacity: 1;*/
-  /*transition: visibility 0s linear 0.5s,opacity 0.5s linear;*/
-/*}*/
-/*#filter-form:hover {*/
-  /*visibility: hidden;*/
-  /*opacity: 0;*/
-/*}*/
+#filter-form {
+  display: none;
+}
+
+#results {
+}
+
+#sidebar {
+  border: 1px solid #111;
+}
