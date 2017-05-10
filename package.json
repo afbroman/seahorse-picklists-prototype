@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
+    "jquery": "^3.2.1",
+    "jquery-ui-bundle": "^1.12.1",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "^0.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
