@@ -4,7 +4,7 @@ import 'jquery-ui-bundle';
 
 class CurrentPicklist extends Component {
   toggleSidebar() {
-    $('#sidebar').toggle('slide', {direction: 'right'});
+    $('#sidebar').toggle('slide', {direction: 'right', duration: 200});
   }
 
   render() {

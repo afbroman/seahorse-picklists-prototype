@@ -5,7 +5,7 @@ class PicklistSidebar extends Component {
     return (
       <div className="card">
         <div className="picklist-sidebar card-block">
-          <div className="card-title">Picklist</div>
+          <div className="card-title">Picklist: Jones 2017-05</div>
           <div className="card-body"></div>
         </div>
       </div>
