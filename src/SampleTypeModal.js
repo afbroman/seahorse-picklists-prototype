@@ -1,7 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
-import 'jquery-ui-bundle';
-import { Modal } from 'react-bootstrap';
 
 export default function SampleTypeModal(props) {
   return (

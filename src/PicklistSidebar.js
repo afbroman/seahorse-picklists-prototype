@@ -6,7 +6,10 @@ class PicklistSidebar extends Component {
       <div className="card">
         <div className="picklist-sidebar card-block">
           <div className="card-title">Picklist: Jones 2017-05</div>
-          <div className="card-body"></div>
+          <div className="card-body">
+            <ul>
+            </ul>
+          </div>
         </div>
       </div>
     );
