@@ -14,10 +14,8 @@ $('#sidebar').droppable({
     //$('#modal').innerHTML(ui.innerHTML);
     //$('#modal > ul').append(ui.draggable[0].innerText);
     //console.log(ui.draggable[0].innerText);
-    //console.log($('#modalInstance'));
-    //$('#modalInstance').modal('toggle');
+    console.log(document.getElementById('modalInstance'));
     const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
-    console.log(textToAdd);
     $('.card-body > ul').append(`<li>${textToAdd}</li>`);
   }
 });

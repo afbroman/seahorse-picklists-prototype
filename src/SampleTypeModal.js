@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { Component} from 'react';
+import { Modal, Button } from 'react-bootstrap';
 
-export default function SampleTypeModal(props) {
-  return (
-    <div id="modalInstance" className="modal fade">
-      <div className="modal-dialog" role="document">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Modal title</h5>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div className="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div className="modal-footer">
-            <button type="button" className="btn btn-primary">Save changes</button>
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+class SampleTypeModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { showModal: false };
+  }
+
+  close() {
+    this.setState({ showModal: false });
+  }
+
+  open() {
+    this.setState({ showModal: true });
+  }
+
+  render() {
+    return (
+      <Modal id="modalInstance" show={this.state.showModal} onHide={this.close}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Modal body text goes here.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={this.close}>Save Changes</Button>
+          <Button onClick={this.close}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+};
+
+export default SampleTypeModal;

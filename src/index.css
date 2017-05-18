@@ -35,3 +35,10 @@ body {
   border: 1px solid #111;
   display: none;
 }
+
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
