@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import PicklistSidebar from './PicklistSidebar';
 import CurrentPicklist from './CurrentPicklist';
 import SampleTypeModal from './SampleTypeModal';
+import FilterForm from './FilterForm';
 import './index.css';
 
 $('.entry').draggable({revert: true});
@@ -33,4 +34,9 @@ ReactDOM.render(
 ReactDOM.render(
   <SampleTypeModal />,
   document.getElementById('modal')
+);
+
+ReactDOM.render(
+  <FilterForm />,
+  document.getElementById('filter-form-container')
 );
