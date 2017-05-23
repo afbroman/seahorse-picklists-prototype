@@ -5,34 +5,29 @@ class FilterForm extends Component {
   render() {
     return (
       <div id="filter-form" className="card">
-        <form id="filterrific_filter" className="new_filterrific" action=
-        "#" accept-charset="UTF-8" method="get" name=
-        "filterrific_filter">
+        <form id="filterrific_filter" className="new_filterrific" action="#" accept-charset="UTF-8" method="get" name="filterrific_filter">
           <input name="utf8" type="hidden" value="✓" />
           <div className="row">
             <div className="col-md-6">
-              <div data-react-class="SampleCount" data-react-props=
-              "{&quot;source&quot;:&quot;/samples.json&quot;}"></div>
+              <div data-react-class="SampleCount" data-react-props="{&quot;source&quot;:&quot;/samples.json&quot;}"></div>
             </div>
             <div className="col-md-3 col-md-offset-9">
-              <Button className=
-              "btn btn-default btn-md pull-right vertical-button"
-                 href=
-                 "/visits/filter?filterrific%5Breset_filterrific%5D=true">
+              <Button className="btn btn-default btn-md pull-right vertical-button"
+                href="/visits/filter?filterrific%5Breset_filterrific%5D=true">
                 Reset filters</Button>
             </div>
           </div>
           <div className="row">
             <div className="col-md-3">
-              <label>Search ADRC ID</label> <input className=
-              "filterrific-periodically-observed form-control" type=
-              "text" name="filterrific[search_query]" id=
-              "filterrific_search_query" />
+              <label>Search ADRC ID</label> <input className="filterrific-periodically-observed form-control"
+                type="text"
+                name="filterrific[search_query]"
+                id="filterrific_search_query" />
             </div>
             <div className="col-md-3">
               <label>Sorted by</label> <select className="form-control"
-                                               name="filterrific[sorted_by]" id=
-                                               "filterrific_sorted_by">
+                name="filterrific[sorted_by]"
+                id="filterrific_sorted_by">
                 <option value="adrc_id_asc">
                 ADRC ID (ascending)
                 </option>
@@ -52,8 +47,8 @@ class FilterForm extends Component {
             </div>
             <div className="col-md-3">
               <label>Sample Type</label> <select className="form-control"
-                                                 name="filterrific[with_sample_type]" id=
-                                                 "filterrific_with_sample_type">
+                name="filterrific[with_sample_type]"
+                id="filterrific_with_sample_type">
                 <option value="">
                 - Any -
                 </option>
@@ -75,9 +70,9 @@ class FilterForm extends Component {
               </select>
             </div>
             <div className="col-md-3">
-              <label>Sample Status</label> <select className=
-              "form-control" name="filterrific[with_sample_status]"
-                             id="filterrific_with_sample_status">
+              <label>Sample Status</label> <select className="form-control"
+                name="filterrific[with_sample_status]"
+                id="filterrific_with_sample_status">
                 <option value="">
                 - Any -
                 </option>
@@ -96,15 +91,15 @@ class FilterForm extends Component {
           <div className="row">
             <div className="col-md-3">
               <label>Multiple ADRC IDs</label> 
-              <textarea className=
-              "filterrific-periodically-observed form-control" name=
-              "filterrific[multiple_id_query]" id=
-              "filterrific_multiple_id_query">
+              <textarea className="filterrific-periodically-observed form-control"
+                name="filterrific[multiple_id_query]"
+                id="filterrific_multiple_id_query">
               </textarea>
             </div>
             <div className="col-md-3">
-              <label>Race</label> <select className="form-control" name=
-              "filterrific[with_race]" id="filterrific_with_race">
+              <label>Race</label> <select className="form-control"
+                name="filterrific[with_race]"
+                id="filterrific_with_race">
                 <option value="">
                 - Any -
                 </option>
@@ -117,8 +112,7 @@ class FilterForm extends Component {
                 <option value="american_indian_or_alaska_native">
                 american_indian_or_alaska_native
                 </option>
-                <option value=
-                "native_hawaiian_or_other_pacific_islander">
+                <option value="native_hawaiian_or_other_pacific_islander">
                 native_hawaiian_or_other_pacific_islander
                 </option>
                 <option value="asian">
@@ -135,27 +129,26 @@ class FilterForm extends Component {
             <div className="col-md-3">
               <label>DOS after</label>
               <div className="input-group">
-                <input className=
-                "filterrific-periodically-observed form-control datepicker"
-                   type="text" name="filterrific[with_dos_gte]" id=
-                   "filterrific_with_dos_gte" />
+                <input className="filterrific-periodically-observed form-control datepicker"
+                  type="text" name="filterrific[with_dos_gte]"
+                  id="filterrific_with_dos_gte" />
               </div>
             </div>
             <div className="col-md-3">
               <label>DOS before</label>
               <div className="input-group">
-                <input className=
-                "filterrific-periodically-observed form-control datepicker"
-                   type="text" name="filterrific[with_dos_lte]" id=
-                   "filterrific_with_dos_lte" />
+                <input className="filterrific-periodically-observed form-control datepicker"
+                  type="text"
+                  name="filterrific[with_dos_lte]"
+                  id="filterrific_with_dos_lte" />
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-3">
               <label>Cohort</label> <select className="form-control"
-                                            name="filterrific[with_cohort]" id=
-                                            "filterrific_with_cohort">
+                name="filterrific[with_cohort]"
+                id="filterrific_with_cohort">
                 <option value="">
                 - Any -
                 </option>
@@ -178,8 +171,8 @@ class FilterForm extends Component {
             </div>
             <div className="col-md-3">
               <label>Gender</label> <select className="form-control"
-                                            name="filterrific[with_gender]" id=
-                                            "filterrific_with_gender">
+                name="filterrific[with_gender]"
+                id="filterrific_with_gender">
                 <option value="">
                 - Any -
                 </option>
@@ -194,27 +187,27 @@ class FilterForm extends Component {
             <div className="col-md-3">
               <label>Age above</label>
               <div className="input-group">
-                <input className=
-                "filterrific-periodically-observed form-control"
-                   type="text" name="filterrific[with_age_gte]" id=
-                   "filterrific_with_age_gte" />
+                <input className="filterrific-periodically-observed form-control"
+                  type="text"
+                  name="filterrific[with_age_gte]"
+                  id="filterrific_with_age_gte" />
               </div>
             </div>
             <div className="col-md-3">
               <label>Age below</label>
               <div className="input-group">
-                <input className=
-                "filterrific-periodically-observed form-control"
-                   type="text" name="filterrific[with_age_lte]" id=
-                   "filterrific_with_age_lte" />
+                <input className="filterrific-periodically-observed form-control"
+                  type="text"
+                  name="filterrific[with_age_lte]"
+                  id="filterrific_with_age_lte" />
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-3">
               <label>Visit Type</label> <select className="form-control"
-                                                name="filterrific[with_visit_type]" id=
-                                                "filterrific_with_visit_type">
+                name="filterrific[with_visit_type]"
+                id="filterrific_with_visit_type">
                 <option value="">
                 - Any -
                 </option>
@@ -265,20 +258,24 @@ class FilterForm extends Component {
           </div>
           <div className="row">
             <div className="col-md-2">
-              <label>Show only completed</label> <input className=
-              "filterrific-periodically-observed pull-right" type=
-              "checkbox" value="completed" checked="checked" name=
-              "filterrific[with_visit_status]" id=
-              "filterrific_with_visit_status" />
+              <label>Show only completed</label>
+              <input className="filterrific-periodically-observed pull-right"
+                type="checkbox"
+                value="completed"
+                checked="checked"
+                name="filterrific[with_visit_status]"
+                id="filterrific_with_visit_status" />
             </div>
             <div className="col-md-2">
-              <label>Include distributed</label> <input name=
-              "filterrific[with_distributed]" type="hidden" value=
-              "undistributed" /> <input className=
-              "filterrific-periodically-observed pull-right" type=
-              "checkbox" value="distributed" name=
-              "filterrific[with_distributed]" id=
-              "filterrific_with_distributed" />
+              <label>Include distributed</label>
+              <input name="filterrific[with_distributed]"
+                type="hidden"
+                value="undistributed" />
+              <input className="filterrific-periodically-observed pull-right"
+                type="checkbox"
+                value="distributed"
+                name="filterrific[with_distributed]"
+                id="filterrific_with_distributed" />
             </div>
           </div>
           <Button className="btn btn-default" id="export_filter">Export</Button>

@@ -39,8 +39,7 @@ class ResultsList extends Component {
               <td>11</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -56,8 +55,7 @@ class ResultsList extends Component {
               <td>11</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -73,8 +71,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -90,8 +87,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -107,8 +103,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -124,8 +119,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -141,8 +135,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -158,8 +151,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -175,8 +167,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <a className="btn btn-default" href=
-                  "#">Notes</a>
+                <a className="btn btn-default" href="#">Notes</a>
               </td>
             </tr>
             <tr className="entry">
@@ -192,8 +183,7 @@ class ResultsList extends Component {
               <td>12</td>
               <td>completed</td>
               <td>
-                <Button className="btn btn-default" href=
-                  "#">Notes</Button>
+                <Button className="btn btn-default" href="#">Notes</Button>
               </td>
             </tr>
           </tbody>
