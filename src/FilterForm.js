@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 class FilterForm extends Component {
   render() {
     return (
-      <div id="filter-form" className="well">
+      <div id="filter-form" className="card">
         <form id="filterrific_filter" className="new_filterrific" action=
         "#" accept-charset="UTF-8" method="get" name=
         "filterrific_filter">
@@ -281,8 +281,8 @@ class FilterForm extends Component {
               "filterrific_with_distributed" />
             </div>
           </div>
-        </form><Button className="btn btn-default" id="export_filter"
-                                               type="button">Export</Button>
+          <Button className="btn btn-default" id="export_filter">Export</Button>
+        </form>
       </div>
     );
   }

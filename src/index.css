@@ -26,9 +26,11 @@ body {
 }
 
 #filter-form {
+  padding: 10px;
 }
 
 #results {
+  padding: 10px;
 }
 
 #sidebar {

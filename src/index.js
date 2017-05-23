@@ -7,6 +7,7 @@ import PicklistSidebar from './PicklistSidebar';
 import CurrentPicklist from './CurrentPicklist';
 import SampleTypeModal from './SampleTypeModal';
 import FilterForm from './FilterForm';
+import ResultsList from './ResultsList';
 import './index.css';
 
 $('.entry').draggable({revert: true});
@@ -39,4 +40,9 @@ ReactDOM.render(
 ReactDOM.render(
   <FilterForm />,
   document.getElementById('filter-form-container')
+);
+
+ReactDOM.render(
+  <ResultsList />,
+  document.getElementById('results')
 );
