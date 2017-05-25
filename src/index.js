@@ -10,7 +10,6 @@ import FilterForm from './FilterForm';
 import ResultsList from './ResultsList';
 import './index.css';
 
-$('.entry').draggable({revert: true});
 $('#sidebar').droppable({
   drop: (event, ui) => {
     //$('#modal').innerHTML(ui.innerHTML);
@@ -46,3 +45,8 @@ ReactDOM.render(
   <ResultsList />,
   document.getElementById('results')
 );
+
+$('.entry').draggable({
+  helper: 'clone',
+  zIndex: 100
+});
