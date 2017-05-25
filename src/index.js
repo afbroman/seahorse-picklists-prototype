@@ -12,10 +12,6 @@ import './index.css';
 
 $('#sidebar').droppable({
   drop: (event, ui) => {
-    //$('#modal').innerHTML(ui.innerHTML);
-    //$('#modal > ul').append(ui.draggable[0].innerText);
-    //console.log(ui.draggable[0].innerText);
-    console.log(document.getElementById('modalInstance'));
     const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
     $('.card-body > ul').append(`<li>${textToAdd}</li>`);
   }
