@@ -5,7 +5,7 @@ class FilterForm extends Component {
   render() {
     return (
       <div id="filter-form" className="card">
-        <form id="filterrific_filter" className="new_filterrific" action="#" accept-charset="UTF-8" method="get" name="filterrific_filter">
+        <form id="filterrific_filter" className="new_filterrific" action="#" method="get" name="filterrific_filter">
           <input name="utf8" type="hidden" value="✓" />
           <div className="row">
             <div className="col-md-6">
@@ -262,7 +262,7 @@ class FilterForm extends Component {
               <input className="filterrific-periodically-observed pull-right"
                 type="checkbox"
                 value="completed"
-                checked="checked"
+                defaultChecked="checked"
                 name="filterrific[with_visit_status]"
                 id="filterrific_with_visit_status" />
             </div>
