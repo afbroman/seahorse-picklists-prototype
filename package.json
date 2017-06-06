@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "react-scripts": "^0.9.5"
+    "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

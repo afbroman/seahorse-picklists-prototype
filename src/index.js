@@ -10,6 +10,16 @@ import FilterForm from './FilterForm';
 import ResultsList from './ResultsList';
 import './index.css';
 
+let modalInstance = ReactDOM.render(
+  <SampleTypeModal />,
+  document.getElementById('modal-container')
+);
+
+ReactDOM.render(
+  <PicklistSidebar />,
+  document.getElementById('sidebar')
+);
+
 $('#sidebar').droppable({
   drop: (event, ui) => {
     const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
@@ -17,19 +27,10 @@ $('#sidebar').droppable({
   }
 });
 
-ReactDOM.render(
-  <PicklistSidebar />,
-  document.getElementById('sidebar')
-);
 
 ReactDOM.render(
   <CurrentPicklist />,
   document.getElementById('current-picklist-container')
-);
-
-ReactDOM.render(
-  <SampleTypeModal />,
-  document.getElementById('modal')
 );
 
 ReactDOM.render(
