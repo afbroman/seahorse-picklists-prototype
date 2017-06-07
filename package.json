@@ -9,10 +9,18 @@
     "jquery-ui-bundle": "^1.12.1",
     "react": "^15.4.2",
     "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
+    "chai": "^4.0.2",
+    "chai-enzyme": "^0.7.1",
+    "enzyme": "^2.8.2",
+    "enzyme-redux": "^0.1.6",
     "faker": "^4.1.0",
+    "react-addons-test-utils": "^15.5.1",
     "react-scripts": "1.0.7"
   },
   "scripts": {
