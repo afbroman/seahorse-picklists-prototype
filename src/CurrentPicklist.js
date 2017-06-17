@@ -8,7 +8,7 @@ class CurrentPicklist extends Component {
     $('#filter-form').toggle('slide', {direction: 'up', duration: 200});
     $('#main-content').toggleClass('col-12 col-8');
     $('#sidebar').toggleClass('col-0 col-4');
-    $('#sidebar').show();
+    $('#sidebar').toggle();
   }
 
   render() {

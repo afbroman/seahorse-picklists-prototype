@@ -19,6 +19,18 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+ReactDOM.render(
+  <CurrentPicklist />,
+  document.getElementById('current-picklist-container')
+);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
+$('#sidebar').hide();
+
 $('#sidebar').droppable({
   drop: (event, ui) => {
     const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
@@ -26,17 +38,7 @@ $('#sidebar').droppable({
   }
 });
 
-ReactDOM.render(
-  <CurrentPicklist />,
-  document.getElementById('current-picklist-container')
-);
-
 $('.entry').draggable({
   helper: 'clone',
   zIndex: 100
 });
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
