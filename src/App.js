@@ -11,11 +11,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="row">
-          <div id="main-content" class="col-12">
+          <div id="main-content" className="col-12">
             <FilterForm />
             <ResultsList />
           </div>
-          <PicklistSidebar />
+          <div id="sidebar" className="col-0">
+            <PicklistSidebar />
+          </div>
         </div>
         <SampleTypeModal />
       </div>
