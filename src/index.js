@@ -3,21 +3,20 @@ import $ from 'jquery';
 import 'jquery-ui-bundle';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PicklistSidebar from './PicklistSidebar';
 import CurrentPicklist from './CurrentPicklist';
-import SampleTypeModal from './SampleTypeModal';
-import FilterForm from './FilterForm';
-import ResultsList from './ResultsList';
+import App from './App';
 import './index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { reducer } from './Reducer';
 
-let modalInstance = ReactDOM.render(
-  <SampleTypeModal />,
-  document.getElementById('modal-container')
-);
 
-ReactDOM.render(
-  <PicklistSidebar />,
-  document.getElementById('sidebar')
+const initialState = {
+};
+const store = createStore(
+  reducer,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 $('#sidebar').droppable({
@@ -27,23 +26,17 @@ $('#sidebar').droppable({
   }
 });
 
-
 ReactDOM.render(
   <CurrentPicklist />,
   document.getElementById('current-picklist-container')
-);
-
-ReactDOM.render(
-  <FilterForm />,
-  document.getElementById('filter-form-container')
-);
-
-ReactDOM.render(
-  <ResultsList />,
-  document.getElementById('results')
 );
 
 $('.entry').draggable({
   helper: 'clone',
   zIndex: 100
 });
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);

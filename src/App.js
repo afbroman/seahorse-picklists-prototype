@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import PicklistSidebar from './PicklistSidebar';
+import SampleTypeModal from './SampleTypeModal';
+import FilterForm from './FilterForm';
+import ResultsList from './ResultsList';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="row">
+          <div id="main-content" class="col-12">
+            <FilterForm />
+            <ResultsList />
+          </div>
+          <PicklistSidebar />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SampleTypeModal />
       </div>
     );
   }
