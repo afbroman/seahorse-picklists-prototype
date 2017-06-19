@@ -12,7 +12,9 @@ import { reducer } from './Reducer';
 
 
 const initialState = {
+  sidebar: { show: false }
 };
+
 const store = createStore(
   reducer,
   initialState,
@@ -20,12 +22,12 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <CurrentPicklist />,
+  <Provider store={store}><CurrentPicklist /></Provider>,
   document.getElementById('current-picklist-container')
 );
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}><App /></Provider>,
   document.getElementById('root')
 );
 
