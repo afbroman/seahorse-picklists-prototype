@@ -6,13 +6,6 @@ import { Button } from 'react-bootstrap';
 import Actions from './Actions';
 
 class CurrentPicklist extends Component {
-  toggleSidebar() {
-    $('#filter-form').toggle('slide', {direction: 'up', duration: 200});
-    $('#main-content').toggleClass('col-12 col-8');
-    $('#sidebar').toggleClass('col-0 col-4');
-    $('#sidebar').toggle();
-  }
-
   render() {
     return (
       <Button id="current-picklist" onClick={this.props.toggleSidebarState}>Current Picklist: Jones 2017-05</Button>

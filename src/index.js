@@ -31,8 +31,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-$('#sidebar').hide();
-
 $('#sidebar').droppable({
   drop: (event, ui) => {
     const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
