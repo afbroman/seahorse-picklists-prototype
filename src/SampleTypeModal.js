@@ -24,10 +24,10 @@ class SampleTypeModal extends Component {
           show={this.props.show}
           onHide={this.props.modalClosed}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
+            <Modal.Title>Select Samples</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>Modal body text goes here.</p>
+            <p>{this.props.text}</p>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.props.modalClosed}>Save Changes</Button>
@@ -41,7 +41,8 @@ class SampleTypeModal extends Component {
 
 function mapStateToProperties(state) {
   return {
-    show: state.modal.show
+    show: state.modal.show,
+    text: state.modal.text
   };
 }
 

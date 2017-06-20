@@ -12,7 +12,7 @@ class PicklistSidebar extends Component {
       drop: (event, ui) => {
         const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
         $('.card-body > ul').append(`<li>${textToAdd}</li>`);
-        this.props.visitDropped();
+        this.props.visitDropped(textToAdd);
       }
     });
   }
@@ -53,9 +53,10 @@ function mapStateToProperties(state) {
 }
 
 export const actionCreators = {
-  visitDropped: () => {
+  visitDropped: (text) => {
     return {
-      type: Actions.visitDropped
+      type: Actions.visitDropped,
+      text: text
     };
   }
 };

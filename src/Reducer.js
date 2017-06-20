@@ -8,7 +8,10 @@ export function reducer(state, action) {
       });
     case Actions.visitDropped:
       return Object.assign({}, state, {
-        modal: {show: true}
+        modal: {
+          show: true,
+          text: action.text
+        }
       });
     case Actions.modalClosed:
       return Object.assign({}, state, {
