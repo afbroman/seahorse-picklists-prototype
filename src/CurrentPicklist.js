@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import $ from 'jquery';
 import 'jquery-ui-bundle';
 import { Button } from 'react-bootstrap';
 import Actions from './Actions';
@@ -14,6 +13,7 @@ class CurrentPicklist extends Component {
 }
 
 function mapStateToProperties(state) {
+  return {};
 }
 
 export const actionCreators = {

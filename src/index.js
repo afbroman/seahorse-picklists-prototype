@@ -12,7 +12,10 @@ import { reducer } from './Reducer';
 
 
 const initialState = {
-  sidebar: { show: false }
+  sidebar: { show: false },
+  modal: {
+    show: false
+  }
 };
 
 const store = createStore(
@@ -30,13 +33,6 @@ ReactDOM.render(
   <Provider store={store}><App /></Provider>,
   document.getElementById('root')
 );
-
-$('#sidebar').droppable({
-  drop: (event, ui) => {
-    const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
-    $('.card-body > ul').append(`<li>${textToAdd}</li>`);
-  }
-});
 
 $('.entry').draggable({
   helper: 'clone',

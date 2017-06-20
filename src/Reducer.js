@@ -6,6 +6,14 @@ export function reducer(state, action) {
       return Object.assign({}, state, {
         sidebar: {show: !state.sidebar.show}
       });
+    case Actions.visitDropped:
+      return Object.assign({}, state, {
+        modal: {show: true}
+      });
+    case Actions.modalClosed:
+      return Object.assign({}, state, {
+        modal: {show: false}
+      });
     default:
       return state;
   }

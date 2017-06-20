@@ -1,17 +1,14 @@
 import React, { Component} from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import Actions from './Actions';
 
 class SampleTypeModal extends Component {
   constructor(props) {
     super(props);
-    this.state = { showModal: false };
+    this.state = { showModal: this.props.show };
 
-    this.close = this.close.bind(this);
     this.open = this.open.bind(this);
-  }
-
-  close() {
-    this.setState({ showModal: false });
   }
 
   open() {
@@ -22,11 +19,10 @@ class SampleTypeModal extends Component {
   render() {
     return (
       <div>
-        <Button onClick={this.open}>Show Modal</Button>
         <Modal id="modalInstance"
           ref={modal => this.currentModal = modal}
-          show={this.state.showModal}
-          onHide={this.close}>
+          show={this.props.show}
+          onHide={this.props.modalClosed}>
           <Modal.Header closeButton>
             <Modal.Title>Modal title</Modal.Title>
           </Modal.Header>
@@ -34,8 +30,8 @@ class SampleTypeModal extends Component {
             <p>Modal body text goes here.</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close}>Save Changes</Button>
-            <Button onClick={this.close}>Close</Button>
+            <Button onClick={this.props.modalClosed}>Save Changes</Button>
+            <Button onClick={this.props.modalClosed}>Close</Button>
           </Modal.Footer>
         </Modal>
       </div>
@@ -43,4 +39,18 @@ class SampleTypeModal extends Component {
   }
 };
 
-export default SampleTypeModal;
+function mapStateToProperties(state) {
+  return {
+    show: state.modal.show
+  };
+}
+
+export const actionCreators = {
+  modalClosed: () => {
+    return {
+      type: Actions.modalClosed
+    };
+  }
+};
+
+export default connect(mapStateToProperties, actionCreators)(SampleTypeModal);
