@@ -17,6 +17,13 @@ class SampleTypeModal extends Component {
   }
 
   render() {
+    const labelStyleFirst = {
+      marginRight: '2px'
+    };
+    const labelStyle = {
+      marginRight: '2px',
+      marginLeft: '10px'
+    };
     return (
       <div>
         <Modal id="modalInstance"
@@ -28,6 +35,16 @@ class SampleTypeModal extends Component {
           </Modal.Header>
           <Modal.Body>
             <p>{this.props.text}</p>
+            <div id="sample-form" className="card">
+              <form>
+                <label htmlFor="serum" style={labelStyleFirst}>Serum</label>
+                <input type="number" name="serum" min="0" max="10" />
+                <label htmlFor="plasma" style={labelStyle}>Plasma</label>
+                <input type="number" name="plasma" min="0" max="10" />
+                <label htmlFor="csf" style={labelStyle}>CSF</label>
+                <input type="number" name="csf" min="0" max="40" />
+              </form>
+            </div>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.props.modalClosed}>Save Changes</Button>

@@ -53,3 +53,7 @@ body {
 .modal-backdrop.in {
   opacity: 0.5;
 }
+
+.picklist-sidebar ul {
+  list-style: none;
+}
