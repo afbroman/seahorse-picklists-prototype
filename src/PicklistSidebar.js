@@ -11,8 +11,12 @@ class PicklistSidebar extends Component {
     this.$node.droppable({
       drop: (event, ui) => {
         const textToAdd = ui.draggable[0].innerText.split('\t').slice(0,3).join(' ');
-        $('.card-body > ul').append(`<li>${textToAdd}</li>`);
-        this.props.visitDropped(textToAdd);
+        if ($('.card-body > ul').text().indexOf(textToAdd) > -1) {
+          // do nothing
+        } else {
+          $('.card-body > ul').append(`<li>${textToAdd}</li>`);
+          this.props.visitDropped(textToAdd);
+        }
       }
     });
   }
