@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import PicklistSidebar from './PicklistSidebar';
 import SampleTypeModal from './SampleTypeModal';
 import FilterForm from './FilterForm';
